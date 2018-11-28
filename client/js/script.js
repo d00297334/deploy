@@ -270,7 +270,7 @@ var notLoggedIn = document.getElementById('notLoggedIn');
 var tabsShow = document.getElementById('tabs-style-shape');
 
 var loadData = function() {
-    return fetch('http://localhost:8080/pets', {
+    return fetch('https://stark-eyrie-32582.herokuapp.com/pets', {
         credentials: "include"
     }).then(function (response) {
         if (response.status == 401) {
@@ -373,7 +373,7 @@ var encodeLogin = function() {
 
 var sendPet = function() {
     var encodedString = encode()
-    fetch('http://localhost:8080/pets', {
+    fetch('https://stark-eyrie-32582.herokuapp.com/pets', {
         credentials: "include",
         body: encodedString,
         method: "POST",
@@ -387,7 +387,7 @@ var sendPet = function() {
 
 var userCreateRequest = function() {
     var encodedString = encodeUser()
-    fetch('http://localhost:8080/users', {
+    fetch('https://stark-eyrie-32582.herokuapp.com/users', {
         credentials: "include",
         body:encodedString,
         method: "POST",
@@ -413,7 +413,7 @@ var userCreateRequest = function() {
 var userLoginRequest = function() {
 
     var encodedString = encodeLogin();
-    fetch('http://localhost:8080/sessions', {
+    fetch('https://stark-eyrie-32582.herokuapp.com/sessions', {
         body: encodedString,
         method: "POST",
         credentials: "include",
@@ -440,7 +440,7 @@ var userLoginRequest = function() {
 
 
 var dbDeletePet  = function(petId) {
-    fetch(`http://localhost:8080/pets/${petId}`, {
+    fetch(`https://stark-eyrie-32582.herokuapp.com/pets/${petId}`, {
         credentials: "include",
         method: "DELETE"
     }).then( function () {
@@ -451,7 +451,7 @@ var dbDeletePet  = function(petId) {
 
 var updatePet = function(petId) {
     var encodedString = editEncode()
-    fetch(`http://localhost:8080/pets/${petId}`, {
+    fetch(`https://stark-eyrie-32582.herokuapp.com/pets/${petId}`, {
         credentials: "include",
         body: encodedString,
         method:"PUT",
