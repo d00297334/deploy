@@ -17,7 +17,7 @@ class userDB:
 		# self.connection = sqlite3.connect("users.db")
 		# self.connection.row_factory = dict_factory
 		urllib.parse.uses_netloc.append("postgres")
-        url = urllib.parse.urlparse(os.environ["DATABASE_URL"])
+		url = urllib.parse.urlparse(os.environ["DATABASE_URL"])
 
         self.connection = psycopg2.connect(
             cursor_factory=psycopg2.extras.RealDictCursor,
