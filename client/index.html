@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Pets</title>
+		
+		
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/tabs.css" />
+		<link rel="stylesheet" type="text/css" href="css/tabstyles.css" />
+		<link rel='stylesheet' type='text/css' href='css/style.css'/>
+  		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+		<svg class="hidden">
+			<defs>
+				<path id="tabshape" d="M80,60C34,53.5,64.417,0,0,0v60H80z"/>
+			</defs>
+		</svg>
+		<div class="container">
+
+
+
+			
+
+
+
+			<h3 id='registerButton' style='padding-left:30px; margin-top:40px; display: inline-block;'>register</h3>
+			<h3 id ='loginButton' style='padding-left:30px; margin-top:40px; display: inline-block;'>log in</h3>
+			<!-- Top Navigation -->
+			
+			<section>
+					<div id='registerForm'>
+						<h4 style='text-align:center;display: inline-block;'>Register</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id='closeReg'>X</span><br>
+						First Name:<input id='firstNameCreate' type='text'><br>
+						Last Name:<input id='lastNameCreate' type='text'><br>
+						Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id='emailCreate' type='email'><br>
+						Password:<input id='passwordCreate' type='password'><br>
+						<input id='submitUserCreate' style='margin:40px 0px;' type='submit'>
+						<p id='createError'></p>
+					</div>
+			
+					<div id='authModal'>
+						<span id='closeAuthModal'>X</span>
+						<p>Please Log In First</p>
+					</div>
+						<div id='loginForm'>
+							<h4 style='text-align:center;display: inline-block;'>Log In</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id='closeLog'>X</span><br>
+							Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id='emailLogin' type='email'><br>
+							Password:<input id='passwordLogin' type='password'><br>
+							<input id='submitUserLogin' style='margin:40px 0px;' type='submit'>
+							<p id='loginError'></p>
+						</div>
+						<h1 id='notLoggedIn' style='text-align:center;font-size:3em;'>Please Log In to Make Changes</h1>
+				<div class="tabs tabs-style-shape" id='tabs-style-shape'>
+					<nav>
+						<ul>
+							<li>
+								<a href="#section-shape-1">
+									<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+									<span>Add Pet</span>
+								</a>
+							</li>
+							<li>
+								<a href="#section-shape-2">
+									<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+									<svg viewBox="0 0 80 60" preserveAspectRatio="none"><use xlink:href="#tabshape"></use></svg>
+									<span>View Pets</span>
+								</a>
+							</li>
+							
+						</ul>
+					</nav>
+					<div class="content-wrap">
+						<section id="section-shape-1">
+							
+							<div class='createHeading'><p>create a new pet</p></div>
+							<div class='form' id='createForm'>
+									Name:&nbsp;<input id='name' type='text'><br>
+									Owner:&nbsp;<input id='owner' type='text'><br>
+									Age:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id='age' type='number'><br>
+									Animal:&nbsp;&nbsp;&nbsp;<select id='petType'>
+										<option value="brown cat">Brown Cat</option>
+										<option value="grey cat">Grey Cat</option>
+										<option value="corgi">Corgi</option>
+										<option value="fish">Fish</option>
+										<option value="red hamster">Red Hamster</option>
+										<option value="colorful hamster">Colorful Hamster</option>
+										<option value="brown dog">Brown Dog</option>
+									</select><br><br>
+									Gender:&nbsp;&nbsp;&nbsp;<select id='petGender'>
+											
+											<option value="Male">Male</option>
+											<option value="Female">Female</option>
+										</select><br><br>
+									<input id='submitForm' type='submit'>
+							</div>
+				
+						
+						</section>
+						<section id="section-shape-2">
+							
+								<p id='currentPets'>current pets</p>
+						
+							<div id='currentContainer'>
+								<div id='petUl'>
+									
+								</div>
+							</div>
+
+							<div id='animalContainer'>
+									<!----<img style='float:left; padding-right:20px;' src='img/greyCat.png' ><br>-->
+									<div>
+										<strong class='identifier'><span class='description'>Name:</span></strong><span id='animalName'></span><br>
+										<strong class='identifier'><span class='description'>Owner:</span></strong><span id='animalOwner'></span><br>
+										<strong class='identifier'><span class='description'>Age:</span></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id='animalAge'></span><br>
+										<strong class='identifier'><span class='description'>Gender:</span></strong><span id='animalGender'></span><br>
+										<strong class='identifier'><span class='description'>Type:</span></strong><span id='animalType'></span><br><br>
+										
+									</div>
+								
+									<button id='editPet'>Edit</button>
+									<button id ='deletePet'>Delete</button>
+									
+							</div>
+							<div id='reqModal'>
+								<h4>Update Pet</h4>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<span id='closeReq'>X</span>
+									<div class='updateForm'>
+									Name:&nbsp;<input id='editName' style='margin:20px;' type='text'><br>
+									Owner:&nbsp;<input id='editOwner' style='margin:20px;' type='text'><br>
+									Age:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id='editAge' style='margin:20px;' type='number'><br>
+									Type:&nbsp;&nbsp;&nbsp;<select id='editType'>
+										<option value="brown cat">Brown Cat</option>
+										<option value="grey cat">Grey Cat</option>
+										<option value="corgi">Corgi</option>
+										<option value="fish">Fish</option>
+										<option value="red hamster">Red Hamster</option>
+										<option value="colorful hamster">Colorful Hamster</option>
+										<option value="brown dog">Brown Dog</option>
+									</select><br><br>
+									Gender:&nbsp;&nbsp;&nbsp;<select id='editGender'>
+											<option value="Male">Male</option>
+											<option value="Female">Female</option>
+										</select><br><br>
+									<input id='submitEdit' type='submit'>
+								</div>
+							</div>
+							<div id='deleteModal'>
+								<h4>Delete Pet?</h4><button id='yesDelete'>Yes</button>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;<button id='noDelete'>No</button>
+							</div>
+
+
+
+
+
+						</section>
+						<p id='noAuth'></p>
+					</div><!-- /content -->
+				</div><!-- /tabs -->
+				
+			</section>
+			<div id='modal'>
+				
+				
+				Pet Created!&nbsp; &nbsp;<span id='close'>X</span>
+			</div>
+			
+		</div><!-- /container -->
+		<script src="js/cbpFWTabs.js"></script>
+		<script src="js/script.js"></script>
+		
+		<script>
+			(function() {
+
+				[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+					new CBPFWTabs( el );
+				});
+
+			})();
+		</script>
+	</body>
+</html>
