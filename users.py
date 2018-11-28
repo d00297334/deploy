@@ -38,7 +38,7 @@ class userDB:
 
 	def addUser(self, body):
 		self.createUsersTable()
-		self.cursor.execute("INSERT INTO users(first_name, last_name, email, encrypted_password) VALUES (%s, %s, %s, %s)", (body["first_name"], body["last_name"], body["email"], body["encrypted_password"]))
+		self.cursor.execute("INSERT INTO users(first_name, last_name, email, encrypted_password) VALUES (%s, %s, %s, %s)", (body['first_name'], body['last_name'], body['email'], body['encrypted_password']))
 		self.connection.commit()
 
 

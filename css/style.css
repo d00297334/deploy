@@ -1,0 +1,283 @@
+* {
+    box-sizing: border-box;
+}
+.form {
+    width:40%;
+    background-color:#bdc2c9;
+    padding:20px;
+    display:inline-block;
+    margin:50px;
+    font-size:0.7em;
+}
+
+.updateForm {
+    width:90%;
+    padding:20px;
+    display:inline-block;
+    font-size:0.7em;
+}
+
+
+#currentContainer {
+    width:40%;
+    background-color:#e7ecea;
+    padding:20px;
+    display:inline-block;
+    margin:50px;
+    font-size:0.7em;
+    height:300px;
+    overflow: scroll;
+}
+
+#animalContainer {
+    width:40%;
+    background-color:#e7ecea;
+    padding:20px;
+    display:inline-block;
+    margin:50px;
+    margin-top:0px;
+    font-size:0.7em;
+    height:300px;
+    position: absolute;
+    top:39%;
+    left:50%;
+}
+
+#displayPets {
+    width:40%;
+    background-color:#bdc2c9;
+    padding:20px;
+    display:inline-block;
+    font-size:0.7em;
+    
+    
+}
+
+.form input {
+    margin:20px;
+    font-size:0.8em;
+}
+
+#submitForm {
+    /*background-color:#2CC185;*/
+    border: 2px solid #a5d1e2;
+    background-color:#a5d1e2;
+    padding: 5px 10px;
+    margin-left:0px;
+    font-size:1em;
+    color:#74777b;
+}
+
+.createHeading {
+    width:40%;
+    padding:30px;
+    display:inline-block;
+    margin:20px;
+    margin-left:30px;
+    padding-top:0px;
+    
+}
+
+.currentHeading {
+    width:30%;
+    padding:30px;
+    display:inline-block;
+    margin-left:30px;
+    
+}
+
+
+
+#submitForm:hover {
+    background-color:#a5d1e2;
+}
+
+
+*:focus {
+    outline: none;
+}
+
+select {
+    font-size:0.8em;
+    margin:10px;
+}
+
+#modal {
+    background-color:#a4a8ac;
+    color:white;
+    padding:30px;
+    width:200px;
+    margin:0 auto;
+    display:none;
+    position:absolute;
+    top:85%;
+    left:75%;
+    z-index:50;
+    font-size:1em;
+}
+
+#close {
+    float:right;
+    cursor:pointer;
+    padding:5px;
+}
+
+.petContainer {
+    background-color:#a5d1e2;
+    padding:20px;
+    margin-bottom:5px;
+}
+
+#petUl  {
+    list-style-type: none;
+}
+
+#displayPets {
+    margin:50px;
+    overflow:scroll;
+    height:300px;
+}
+
+#currentPets {
+    padding-top:0px;
+}
+
+img {
+    height:70%;
+    width:50%;
+}
+
+.identifier {
+    font-size:1.2em;
+    margin:20px;
+    
+}
+
+button{
+    margin:15px;
+    background-color:#a5d1e2;
+    padding:7px;
+}
+
+#reqModal {
+    position: absolute;
+    width:600px;
+    height:500px;
+    top:10%;
+    left:25%;
+    z-index:30;
+    background-color:#74777b;
+    color:white;
+    display:none;
+}
+
+ #registerForm {
+    position: absolute;
+    width:600px;
+    height:650px;
+    top:30%;
+    left:35%;
+    z-index:2000;
+    background-color:#74777b;
+    color:white;
+    padding:50px;
+    display:none;
+    
+}
+
+
+#registerButton {
+    cursor:pointer;
+}
+
+#closeReg {
+    cursor: pointer;
+    font-weight:bolder;
+    font-size:1.3em;
+}
+
+#registerForm input {
+    margin:20px;
+}
+
+#loginForm {
+    position: absolute;
+    width:600px;
+    height:500px;
+    top:30%;
+    left:35%;
+    z-index:6000;
+    background-color:#74777b;
+    color:white;
+    padding:50px;
+    display:none;
+} 
+
+#authModal {
+    position: absolute;
+    width:300px;
+    height:250px;
+    top:30%;
+    left:43%;
+    z-index:7000;
+    font-size:1.2em;
+    background-color:#74777b;
+    color:white;
+    padding:50px;
+    display:none;
+    
+}
+
+
+/* 
+#tabs-style-shape {
+    display:none;
+} */
+
+#authModal span {
+    cursor:pointer;
+}
+
+#loginForm input {
+    margin:20px;
+}
+
+#closeLog {
+    cursor:pointer;
+    font-weight:bolder;
+    font-size:1.3em;
+}
+
+#loginButton {
+    cursor: pointer;
+}
+
+
+
+#reqModal h4 {
+    display:inline-block;
+    text-align:center;
+    padding-left:20px;
+}
+
+#closeReq {
+    cursor:pointer;
+}
+
+#deleteModal {
+    position: absolute;
+    padding:40px;
+    top:20%;
+    left:28%;
+    z-index:30;
+    background-color:#74777b;
+    color:white;
+    text-align:center;
+    width:500px;
+    display:none;
+    
+}
+
+section {
+    padding-top:1px;
+}

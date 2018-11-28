@@ -86,7 +86,7 @@ class petDB:
 		self.connection.commit()
 
 	def exists(self, id):
-		self.cursor.execute('select * from pets where id = %s;', (id,))
+		self.cursor.execute("select * from pets where id = %s;", (id,))
 		data = self.cursor.fetchone()
 		if data is None:
 			return False
