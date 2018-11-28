@@ -38,7 +38,7 @@ class userDB:
 
 	def addUser(self, body):
 		self.createUsersTable()
-		self.cursor.execute("INSERT INTO users(first_name, last_name, email, encrypted_password) VALUES (%s, %s, %s, %s)", (body['first_name'], body['last_name'], body['email'], body['encrypted_password']))
+		self.cursor.execute("INSERT INTO users(first_name, last_name, email, encrypted_password) VALUES (%s, %s, %s, %s)", (body["first_name"], body["last_name"], body["email"], body["encrypted_password"]))
 		self.connection.commit()
 
 
@@ -69,14 +69,14 @@ class userDB:
 		data = self.cursor.fetchone()
 		if data is None:
 			return False
-		return data['encryptedPassword']
+		return data["encrypted_password"]
 
 
 	def exists(self, email):
 		self.createUsersTable()
-		self.cursor.execute('select * from users where email = %s;', (email,))
+		self.cursor.execute("select * from users where email = %s;", (email,))
 		data = self.cursor.fetchone()
 		if data is None:
 			return None
-		return data['userId']
+		return data["userId"]
 		
