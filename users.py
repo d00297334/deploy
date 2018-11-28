@@ -37,12 +37,12 @@ class userDB:
 
 
 	def addUser(self, body):
-		self.cursor.execute("INSERT INTO users(first_name, last_name, email, encryptedPassword) VALUES (%s, %s, %s, %s)", (body['first_name'], body['last_name'], body['email'], body['encryptedPassword']))
+		self.cursor.execute("INSERT INTO users(first_name, last_name, email, encrypted_password) VALUES (%s, %s, %s, %s)", (body['first_name'], body['last_name'], body['email'], body['encryptedPassword']))
 		self.connection.commit()
 
 
 	def createUsersTable(self):
-		self.cursor.execute("CREATE TABLE IF NOT EXISTS users (id SERIAL PRIMARY KEY, fist_name VARCHAR(255), last_name VARCHAR(255), email VARCHAR(255), encryptedPassword VARCHAR(255))")
+		self.cursor.execute("CREATE TABLE IF NOT EXISTS users (id SERIAL PRIMARY KEY, fist_name VARCHAR(255), last_name VARCHAR(255), email VARCHAR(255), encrypted_password VARCHAR(255))")
 		self.connection.commit()
 
 
