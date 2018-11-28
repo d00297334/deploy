@@ -48,7 +48,6 @@ class userDB:
 
 
 	def listAllUsers(self):
-		self.createUsersTable()
 		self.cursor.execute("SELECT * FROM users")
 		data = self.cursor.fetchall()
 		self.connection.commit()
@@ -56,7 +55,6 @@ class userDB:
 
 
 	def retrieveCurrentUser(self, email):
-		self.createUsersTable()
 		self.cursor.execute("SELECT * FROM users WHERE email = %s", (email, ))
 		data = self.cursor.fetchall()
 		self.connection.commit()
@@ -64,7 +62,6 @@ class userDB:
 
 
 	def getPassword(self, userId):
-		self.createUsersTable()
 		self.cursor.execute("SELECT * FROM users where userId = %s", (userId, ))
 		data = self.cursor.fetchone()
 		if data is None:
@@ -73,7 +70,6 @@ class userDB:
 
 
 	def exists(self, email):
-		self.createUsersTable()
 		self.cursor.execute("select * from users where email = %s;", (email,))
 		data = self.cursor.fetchone()
 		if data is None:
