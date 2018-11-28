@@ -43,7 +43,7 @@ class userDB:
 
 
 	def createUsersTable(self):
-		self.cursor.execute("CREATE TABLE IF NOT EXISTS users (id SERIAL PRIMARY KEY, fist_name VARCHAR(255), last_name VARCHAR(255), email VARCHAR(255), encrypted_password VARCHAR(255))")
+		self.cursor.execute("CREATE TABLE IF NOT EXISTS users (id SERIAL PRIMARY KEY, first_name VARCHAR(255), last_name VARCHAR(255), email VARCHAR(255), encrypted_password VARCHAR(255))")
 		self.connection.commit()
 
 
