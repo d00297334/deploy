@@ -184,7 +184,7 @@ class MyAwesomeHandler(BaseHTTPRequestHandler):
 			"first_name":parsed_data['first_name'][0],
 			"last_name":parsed_data['last_name'][0],
 			"email":parsed_data['email'][0],
-			"encryptedPassword":hashed
+			"encrypted_password":hashed
 		}
 
 

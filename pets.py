@@ -19,7 +19,7 @@ class petDB:
 
 
 		urllib.parse.uses_netloc.append("postgres")
-        url = urllib.parse.urlparse(os.environ["DATABASE_URL"])
+		url = urllib.parse.urlparse(os.environ["DATABASE_URL"])
 
         self.connection = psycopg2.connect(
             cursor_factory=psycopg2.extras.RealDictCursor,
