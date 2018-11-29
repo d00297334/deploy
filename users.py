@@ -74,5 +74,5 @@ class userDB:
 		data = self.cursor.fetchone()
 		if data is None:
 			return None
-		return data["userId"]
+		return data["id"]
 		
