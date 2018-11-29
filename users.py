@@ -62,7 +62,7 @@ class userDB:
 
 
 	def getPassword(self, id):
-		self.cursor.execute("SELECT * FROM users where userId = %s", (id, ))
+		self.cursor.execute("SELECT * FROM users where id = %s", (id, ))
 		data = self.cursor.fetchone()
 		if data is None:
 			return False
